@@ -199,10 +199,6 @@ status_t GraphicBufferAllocator::alloc(uint32_t w, uint32_t h, PixelFormat forma
         w = h = 1;
 
     // we have a h/w allocator and h/w buffer is requested
-<<<<<<< HEAD
-    status_t err; 
-    
-=======
 
 #ifdef EXYNOS4_ENHANCEMENTS
     if ((format == 0x101) || (format == 0x105) || (format == 0x107)) {
@@ -220,7 +216,6 @@ status_t GraphicBufferAllocator::alloc(uint32_t w, uint32_t h, PixelFormat forma
     // by the android.opengl.cts.GLSurfaceViewTest CTS test.
     BufferLiberatorThread::maybeWaitForLiberation();
 
->>>>>>> 4cd7227... Merge tag 'android-4.2.2_r1' of https://android.googlesource.com/platform/frameworks/native into 1.1
     err = mAllocDev->alloc(mAllocDev, w, h, format, usage, handle, stride);
 
     if (err != NO_ERROR) {
